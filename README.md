@@ -1,2 +1,2 @@
 # arorpalak
-Assets of kitchen, yard, cafeteria, starting cell &amp; main area included 
+Added the player robot and the background of the game.
