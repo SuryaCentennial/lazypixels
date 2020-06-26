@@ -22,7 +22,7 @@ public class PlayerBulletShoot : MonoBehaviour {
 	}
 	
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.S)){
+		if (Input.GetKeyDown (KeyCode.LeftControl)){
 			animator.SetTrigger ("shoot");
 			ShootBullet ();
 		}

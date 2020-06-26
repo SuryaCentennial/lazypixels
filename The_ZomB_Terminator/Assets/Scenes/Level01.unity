@@ -287,7 +287,7 @@ PrefabInstance:
         type: 3}
       propertyPath: canvasController
       value: 
-      objectReference: {fileID: 1592252960}
+      objectReference: {fileID: 0}
     - target: {fileID: 114366626876630564, guid: 677b3dde0875087438ca92cf4e37a128,
         type: 3}
       propertyPath: zombieController
@@ -297,7 +297,7 @@ PrefabInstance:
         type: 3}
       propertyPath: timerController
       value: 
-      objectReference: {fileID: 1402802421}
+      objectReference: {fileID: 0}
     - target: {fileID: 114827732271704070, guid: 677b3dde0875087438ca92cf4e37a128,
         type: 3}
       propertyPath: playerSpeed
@@ -318,7 +318,8 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114066457596512594, guid: 677b3dde0875087438ca92cf4e37a128, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 677b3dde0875087438ca92cf4e37a128, type: 3}
 --- !u!1001 &477891370
 PrefabInstance:
@@ -800,18 +801,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 394002765}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1402802421 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114066457596512594, guid: 677b3dde0875087438ca92cf4e37a128,
-    type: 3}
-  m_PrefabInstance: {fileID: 394002765}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c557edc8c75e4643804a800107c1d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1473267514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -883,7 +872,6 @@ GameObject:
   - component: {fileID: 1592252958}
   - component: {fileID: 1592252957}
   - component: {fileID: 1592252956}
-  - component: {fileID: 1592252960}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -971,30 +959,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1592252960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1592252955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 546cd7a9d6cca3c4abd8289fcb19c51d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreLabel: {fileID: 0}
-  robotHealthLabel: {fileID: 0}
-  gameOverLabel: {fileID: 0}
-  highScoreLabel: {fileID: 0}
-  gameTitleLabel: {fileID: 1012969773}
-  timerLabel: {fileID: 0}
-  level1CompletedLabel: {fileID: 0}
-  playAgainBtn: {fileID: 0}
-  playBtn: {fileID: 0}
-  coin: {fileID: 0}
-  zombie: {fileID: 0}
-  timerController: {fileID: 0}
 --- !u!4 &1634168147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4333580898512080, guid: 157c5b5e9179e784f8a3d6a9dbfd968f,

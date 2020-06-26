@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: slide
+    m_ConditionEvent: slideTrigger
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1871253890084582016}
@@ -17,10 +17,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.6675183
-  m_TransitionOffset: 0
-  m_ExitTime: 0.20248169
-  m_HasExitTime: 1
+  m_TransitionDuration: 0.7083942
+  m_TransitionOffset: 0.03336813
+  m_ExitTime: 0.1534306
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -35,9 +35,6 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 7
     m_ConditionEvent: velocity
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: slide
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102625253397297262}
@@ -65,7 +62,7 @@ AnimatorStateTransition:
     m_ConditionEvent: velocity
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: slide
+    m_ConditionEvent: slideTrigger
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1871253890084582016}
@@ -76,7 +73,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.60701555
   m_TransitionOffset: 0
   m_ExitTime: 0.089476705
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -116,6 +113,12 @@ AnimatorController:
     m_Controller: {fileID: 0}
   - m_Name: slide
     m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: slideTrigger
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -690,8 +693,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 2
-    m_ConditionEvent: slide
+  - m_ConditionMode: 6
+    m_ConditionEvent: velocity
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102555237263662302}

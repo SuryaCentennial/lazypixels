@@ -64,6 +64,7 @@ public class PlayerRobotController : MonoBehaviour, IDamageable {
 			//in PlayerBuletShoot Script
 
 
+
 		}
 
 
@@ -72,14 +73,12 @@ public class PlayerRobotController : MonoBehaviour, IDamageable {
 
 	}
 
-	void update(){
-					//To make player Slide
-			if (Input.GetKeyDown (KeyCode.RightShift)){
-				playerAnimator.SetBool ("slide", true);
+	void Update(){
+			//Slide trigger
+			if (Input.GetKeyDown (KeyCode.S)){
+				playerAnimator.SetTrigger ("slideTrigger");
 			}
-			else if (Input.GetKeyUp (KeyCode.RightShift)){
-				playerAnimator.SetBool ("slide", false);
-			}
+
 	}
 
 	private bool IsPlayerGrounded(){
