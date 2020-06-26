@@ -3,8 +3,9 @@
 --- !u!74 &7400000
 AnimationClip:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: PlayerJump
   serializedVersion: 6
   m_Legacy: 0
@@ -25,9 +26,9 @@ AnimationClip:
     - time: 0.16666667
       value: {fileID: 21300000, guid: 307d11666d03d35439bf043c375fe338, type: 3}
     - time: 0.25
-      value: {fileID: 21300000, guid: dfccc9773e4642a4e8cba117b07a6104, type: 3}
+      value: {fileID: 21300000, guid: 7e438d3b666da6c44bf2d1d1c27bf0f8, type: 3}
     - time: 0.33333334
-      value: {fileID: 21300000, guid: d69eca90d7c8a6f4fb28d69c6dd250e9, type: 3}
+      value: {fileID: 21300000, guid: 7e438d3b666da6c44bf2d1d1c27bf0f8, type: 3}
     - time: 0.41666666
       value: {fileID: 21300000, guid: 7e438d3b666da6c44bf2d1d1c27bf0f8, type: 3}
     - time: 0.5
@@ -60,8 +61,8 @@ AnimationClip:
     - {fileID: 21300000, guid: 00d6a828b2de5c84b8b8be2cbebb25ac, type: 3}
     - {fileID: 21300000, guid: 7cb2112529cbd5749b211551c0db9bec, type: 3}
     - {fileID: 21300000, guid: 307d11666d03d35439bf043c375fe338, type: 3}
-    - {fileID: 21300000, guid: dfccc9773e4642a4e8cba117b07a6104, type: 3}
-    - {fileID: 21300000, guid: d69eca90d7c8a6f4fb28d69c6dd250e9, type: 3}
+    - {fileID: 21300000, guid: 7e438d3b666da6c44bf2d1d1c27bf0f8, type: 3}
+    - {fileID: 21300000, guid: 7e438d3b666da6c44bf2d1d1c27bf0f8, type: 3}
     - {fileID: 21300000, guid: 7e438d3b666da6c44bf2d1d1c27bf0f8, type: 3}
     - {fileID: 21300000, guid: 9a33da118e8b07244b11f914706fed1b, type: 3}
     - {fileID: 21300000, guid: b780b80eeae723147bacb5931a61e06c, type: 3}
@@ -91,5 +92,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_GenerateMotionCurves: 0
   m_Events: []

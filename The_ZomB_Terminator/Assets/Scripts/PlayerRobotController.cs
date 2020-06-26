@@ -62,11 +62,24 @@ public class PlayerRobotController : MonoBehaviour, IDamageable {
 
 			//To make player shoot:
 			//in PlayerBuletShoot Script
+
+
 		}
+
 
 		CheckPlayerBoundaries ();
 		playerTransform.position = playerCurrentPosition;
 
+	}
+
+	void update(){
+					//To make player Slide
+			if (Input.GetKeyDown (KeyCode.RightShift)){
+				playerAnimator.SetBool ("slide", true);
+			}
+			else if (Input.GetKeyUp (KeyCode.RightShift)){
+				playerAnimator.SetBool ("slide", false);
+			}
 	}
 
 	private bool IsPlayerGrounded(){

@@ -313,6 +313,11 @@ PrefabInstance:
       propertyPath: playerEndX
       value: 11000
       objectReference: {fileID: 0}
+    - target: {fileID: 212101615329462112, guid: 677b3dde0875087438ca92cf4e37a128,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 677b3dde0875087438ca92cf4e37a128, type: 3}
 --- !u!1001 &477891370
