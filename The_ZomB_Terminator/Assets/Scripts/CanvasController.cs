@@ -146,20 +146,43 @@ public class CanvasController : MonoBehaviour {
 	}
 
 	public void LevelTwoCompleted(){
+		Debug.Log("Test1:)\n");
 		gameOverLabel.gameObject.SetActive (false);
 		playAgainBtn.gameObject.SetActive (false);
 		robotHealthLabel.gameObject.SetActive (false);
+		Debug.Log("Test2:)\n");
 		scoreLabel.gameObject.SetActive (false);
 		gameTitleLabel.gameObject.SetActive (false);
 		playBtn.gameObject.SetActive (false);
-		coin.gameObject.SetActive (false);
-		zombie.gameObject.SetActive (false);
-
+		//coin.gameObject.SetActive (false);
+		//zombie.gameObject.SetActive (false);
+		Debug.Log("Test3:)\n");
 		level1CompletedLabel.gameObject.SetActive (true);
 		timerLabel.gameObject.SetActive (true);
 		highScoreLabel.gameObject.SetActive (true);
+		Debug.Log("Test4:)\n");
 		playAgainBtn.gameObject.SetActive (true);
+		highScoreLabel.text = "HIGH SCORE: " + Score;
+		Debug.Log("Test5:)\n");
+	}
+
+	public void LevelThreeCompleted()
+	{
+		gameOverLabel.gameObject.SetActive(false);
+		playAgainBtn.gameObject.SetActive(false);
+		robotHealthLabel.gameObject.SetActive(false);
+		scoreLabel.gameObject.SetActive(false);
+		gameTitleLabel.gameObject.SetActive(false);
+		playBtn.gameObject.SetActive(false);
+		coin.gameObject.SetActive(false);
+		zombie.gameObject.SetActive(false);
+
+		level1CompletedLabel.gameObject.SetActive(true);
+		timerLabel.gameObject.SetActive(true);
+		highScoreLabel.gameObject.SetActive(true);
+		playAgainBtn.gameObject.SetActive(true);
 		highScoreLabel.text = "HIGH SCORE: " + Score;
 
 	}
+
 }
