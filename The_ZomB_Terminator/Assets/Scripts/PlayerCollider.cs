@@ -45,7 +45,7 @@ public class PlayerCollider : MonoBehaviour {
 		if(other.gameObject.tag.Equals ("Level2EndCollider"))
 		{
 			Debug.Log ("Congratulations Level 2 Completed:)\n");
-			//canvasController.LevelTwoCompleted();
+			canvasController.LevelTwoCompleted();
 			Debug.Log("Test1:)\n");
 			//timerController.FinishTime ();
 			Debug.Log("Tet2)\n");
@@ -55,8 +55,8 @@ public class PlayerCollider : MonoBehaviour {
 		if (other.gameObject.tag.Equals("Level3EndCollider"))
 		{
 			Debug.Log("Congratulations Level 2 Completed:)\n");
-			//canvasController.LevelThreeCompleted();
-			timerController.FinishTime();
+			canvasController.LevelThreeCompleted();
+			//timerController.FinishTime();
 		}
 
 

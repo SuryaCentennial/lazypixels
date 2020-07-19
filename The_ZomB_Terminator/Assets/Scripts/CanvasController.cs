@@ -93,7 +93,8 @@ public class CanvasController : MonoBehaviour {
 		timerLabel.gameObject.SetActive (false);
 		coin.gameObject.SetActive (false);
 		zombie.gameObject.SetActive (false);
-		level1CompletedLabel.gameObject.SetActive (false);
+		GameObject.FindGameObjectWithTag("LevelCompleteLabel").SetActive(false);
+		//level1CompletedLabel.gameObject.SetActive (false);
 
 		gameTitleLabel.gameObject.SetActive (true);
 		playBtn.gameObject.SetActive (true);
@@ -108,13 +109,14 @@ public class CanvasController : MonoBehaviour {
 		gameOverLabel.gameObject.SetActive (false);
 		highScoreLabel.gameObject.SetActive (false);
 		playAgainBtn.gameObject.SetActive (false);
+		//GameObject.FindGameObjectWithTag("LevelCompleteLabel").SetActive(false);
 		level1CompletedLabel.gameObject.SetActive (false);
 
 		robotHealthLabel.gameObject.SetActive (true);
 		scoreLabel.gameObject.SetActive (true);
 		timerLabel.gameObject.SetActive (true);
-		//coin.gameObject.SetActive (true);
-		//zombie.gameObject.SetActive (true);
+		coin.gameObject.SetActive (true);
+		zombie.gameObject.SetActive (true);
 
 		gameTitleLabel.gameObject.SetActive (false);
 		playBtn.gameObject.SetActive (false);
@@ -175,8 +177,8 @@ public class CanvasController : MonoBehaviour {
 		scoreLabel.gameObject.SetActive(false);
 		gameTitleLabel.gameObject.SetActive(false);
 		playBtn.gameObject.SetActive(false);
-		coin.gameObject.SetActive(false);
-		zombie.gameObject.SetActive(false);
+		//coin.gameObject.SetActive(false);
+		//zombie.gameObject.SetActive(false);
 
 		level1CompletedLabel.gameObject.SetActive(true);
 		timerLabel.gameObject.SetActive(true);
