@@ -12,6 +12,7 @@ TagManager:
   - LevelEndCollider
   - rope
   - Level2EndCollider
+  - Level3EndCollider
   layers:
   - Default
   - TransparentFX
