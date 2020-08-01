@@ -14,11 +14,24 @@ public class BulletScript : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D other){
-		IDamageable d = other.gameObject.GetComponent<IDamageable> ();
-		if(d != null){
-			d.Damage (damage);
-	    }
-		Destroy (gameObject);
+		if (other.gameObject.tag.Equals("Saw"))
+		{
+			Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), other.gameObject.GetComponent<Collider2D>());
+		}
+		else if (other.gameObject.tag.Equals("SawBullet"))
+		{
+			Destroy(other.gameObject);
+			Destroy(gameObject);
+		}
+		else {
+			Debug.Log("Collision bullet with the Saw :(\n");
+			IDamageable d = other.gameObject.GetComponent<IDamageable>();
+			if (d != null)
+			{
+				d.Damage(damage);
+			}
+			Destroy(gameObject);
+		}
    }
 
 	private IEnumerator Finish(){

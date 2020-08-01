@@ -54,9 +54,10 @@ public class PlayerCollider : MonoBehaviour {
 
 		if (other.gameObject.tag.Equals("Level3EndCollider"))
 		{
-			Debug.Log("Congratulations Level 2 Completed:)\n");
+			Debug.Log("Congratulations Level 3 Completed:)\n");
 			canvasController.LevelThreeCompleted();
 			//timerController.FinishTime();
+			StartCoroutine("GameOver");
 		}
 
 
@@ -68,6 +69,26 @@ public class PlayerCollider : MonoBehaviour {
 				zombieController.zombieCollideSound.Play ();}
 			canvasController.RobotHealth -= 20;
 			StartCoroutine ("Blink");
+		}
+
+		else if (other.gameObject.tag.Equals("Saw"))
+		{
+			Debug.Log("Collision detected with the Saw :(\n");
+			canvasController.RobotHealth -= 20;
+			StartCoroutine("Blink");
+		}
+		else if (other.gameObject.tag.Equals("SawBullet"))
+		{
+			Debug.Log("Collision detected with the SawBullet :(\n");
+			canvasController.RobotHealth -= 20;
+			Destroy(other.gameObject);
+			StartCoroutine("Blink");
+		}
+		else if (other.gameObject.tag.Equals("SawTop"))
+		{
+			Debug.Log("Collision detected with the Saw :(\n");
+			canvasController.RobotHealth -= 20;
+			StartCoroutine("Blink");
 		}
 
 		else if (other.gameObject.tag.Equals ("Bullet")) {
@@ -112,6 +133,12 @@ public class PlayerCollider : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(3.0f);
 		SceneManager.LoadScene("Level3");
+	}
+
+	IEnumerator GameOver()
+	{
+		yield return new WaitForSeconds(3.0f);
+		SceneManager.LoadScene("GameComplete");
 	}
 }
 

@@ -16,10 +16,14 @@ public class PlayerRobotController : MonoBehaviour, IDamageable {
 	[SerializeField]
 	private float playerEndX = 10300f;
 
+	private float gravityScale = 200f;
+	private float playerMass = 1f;
+
 	private Rigidbody2D playerRigidBody = null;
 	private Animator playerAnimator = null;
 	private Vector2 playerCurrentPosition;
 	private Transform playerTransform;
+	private GameObject[] saws;
 
 	private int playerHealth = 100;
 	public bool deadFlag = false;
@@ -29,7 +33,8 @@ public class PlayerRobotController : MonoBehaviour, IDamageable {
 		playerRigidBody = gameObject.GetComponent<Rigidbody2D> ();
 		playerTransform = gameObject.GetComponent<Transform> ();
 		playerCurrentPosition = playerTransform.position;
-		
+		saws = GameObject.FindGameObjectsWithTag("SawTop");
+
 	}
 
 	void FixedUpdate () {
@@ -75,9 +80,23 @@ public class PlayerRobotController : MonoBehaviour, IDamageable {
 
 	void Update(){
 			//Slide trigger
-			if (Input.GetKeyDown (KeyCode.S)){
-				playerAnimator.SetTrigger ("slideTrigger");
+		if (Input.GetKeyDown (KeyCode.S)){
+			//playerRigidBody.gravityScale = 0f;
+			//playerRigidBody.mass = 0f;
+			
+			foreach (GameObject saw in saws)
+			{
+				saw.GetComponent<Collider2D>().enabled = false;
 			}
+			//gameObject.GetComponent<Collider2D>().enabled = false;
+			playerAnimator.SetTrigger ("slideTrigger");
+			playerCurrentPosition = playerTransform.position;
+			//To make player move
+			float moveHorizontal = Input.GetAxis("Horizontal");
+			playerRigidBody.velocity = new Vector2(moveHorizontal * playerSpeed, playerRigidBody.velocity.y);
+			StartCoroutine(waitForSec(2.0f));
+
+		}
 
 	}
 
@@ -110,5 +129,17 @@ public class PlayerRobotController : MonoBehaviour, IDamageable {
 		else if (playerCurrentPosition.x < playerStartX) {     
 			playerCurrentPosition.x = playerStartX;
 		}
+	}
+
+	private IEnumerator waitForSec(float sec)
+	{
+		yield return new WaitForSeconds(sec);
+		foreach (GameObject saw in saws)
+		{
+			saw.GetComponent<Collider2D>().enabled = true;
+		}
+		//gameObject.GetComponent<Collider2D>().enabled = true;
+		//playerRigidBody.gravityScale = gravityScale;
+		//playerRigidBody.mass = playerMass;
 	}
 }
