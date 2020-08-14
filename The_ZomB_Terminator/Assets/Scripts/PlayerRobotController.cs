@@ -14,7 +14,7 @@ public class PlayerRobotController : MonoBehaviour, IDamageable {
 	[SerializeField]
 	private float playerStartX = -2300f;
 	[SerializeField]
-	private float playerEndX = 10300f;
+	private float playerEndX = 11000f;
 
 	private float gravityScale = 200f;
 	private float playerMass = 1f;
